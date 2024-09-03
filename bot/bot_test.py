@@ -28,13 +28,6 @@ QA = {
 async def process_start_command(message: types.Message):
     await message.reply("Привет!\nБот работы с мебелью!",
                         reply_markup=create_keyboards(btn_list=list(QA.keys())))
-    print(message.from_user)
-    await bot.send_message(chat_id=7160982075, text="Проверка связи")
-
-
-@dp.message_handler(commands=['help'])
-async def process_help_command(message: types.Message):
-    await message.reply("Напиши мне что-нибудь, и я отпрпавлю этот текст тебе в ответ!")
 
 
 @dp.message_handler()
